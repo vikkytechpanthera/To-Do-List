@@ -107,4 +107,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Load tasks on page load
     loadTasks();
+
+    document.getElementById("addTask").addEventListener("click", addTask);
+document.getElementById("taskInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        addTask();
+    }
+});
+
+function addTask() {
+    const taskInput = document.getElementById("taskInput");
+    const taskText = taskInput.value.trim();
+
+    if (taskText === "") return; // Prevent adding empty tasks
+
+    addTaskToList(taskText);
+    taskInput.value = ""; // Clear input after adding
+}
+
 });
