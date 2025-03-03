@@ -11,8 +11,26 @@
         <div class="input-section">
             <h1>To-Do List</h1>
             <input type="text" id="taskInput" placeholder="Add a task..." />
+            <input type="date" id="taskDate" />
+            <select id="taskCategory">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+            </select>
             <button id="addTask">Add</button>
+
+            <div class="filter-section">
+                <label for="filterCategory">Filter by Category:</label>
+                <select id="filterCategory">
+                    <option value="all">All Categories</option>
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Study">Study</option>
+                </select>
+            </div>
+            
         </div>
+        
         <ul id="taskList" class="task-list"></ul>
     </div>
     

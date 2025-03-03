@@ -101,3 +101,67 @@ li button {
 li button:hover {
     background: rgba(0, 0, 0, 0.1);
 }
+
+/* Category dropdown styling */
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    width: 90%;
+}
+
+/* Category section headers */
+.category-section {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Filter dropdown styling */
+.filter-section {
+    margin-top: 10px;
+}
+
+#filterCategory {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Animation for adding tasks */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for removing tasks */
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+/* Apply animation when adding a task */
+.task-item {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Transition effect for task filtering */
+.task-list {
+    transition: opacity 0.3s ease-in-out;
+}
